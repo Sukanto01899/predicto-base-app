@@ -10,14 +10,13 @@ const ROOT_URL =
  */
 export const minikitConfig = {
   accountAssociation: {
-    accountAssociation: {
-      header:
-        "eyJmaWQiOjMxNzI2MSwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDQ5ZWUzMjNFYTFCYjY1RjY4RkE3NWRmMGM2RDQ0MWQyMGQ4M0E4Q2QifQ",
-      payload: "eyJkb21haW4iOiJwcmVkaWN0by1nYW1lLnZlcmNlbC5hcHAifQ",
-      signature:
-        "lPmQSu3MdgGXWVaLSLgicSaZfqtaIv/OCadbBygTTCUSkfexzNbjd2r8H/JDsvCqKoKCUCCHvH51R2wj0icu7hw=",
-    },
+    header:
+      "eyJmaWQiOjMxNzI2MSwidHlwZSI6ImF1dGgiLCJrZXkiOiIweDQ5ZWUzMjNFYTFCYjY1RjY4RkE3NWRmMGM2RDQ0MWQyMGQ4M0E4Q2QifQ",
+    payload: "eyJkb21haW4iOiJwcmVkaWN0by1nYW1lLnZlcmNlbC5hcHAifQ",
+    signature:
+      "lPmQSu3MdgGXWVaLSLgicSaZfqtaIv/OCadbBygTTCUSkfexzNbjd2r8H/JDsvCqKoKCUCCHvH51R2wj0icu7hw=",
   },
+
   baseBuilder: {
     ownerAddress: "0xB23955A49c9974a40e68717813a108002072a368",
   },
