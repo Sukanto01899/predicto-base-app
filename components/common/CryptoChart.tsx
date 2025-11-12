@@ -27,9 +27,12 @@ const ranges = {
   "1M": 30,
 };
 
+type PricesType = [number, number];
+
 type DataType = {
   time: number;
   price: number;
+  prices: PricesType[];
 };
 
 export default function CryptoChart({ currency }: { currency: string }) {
@@ -49,7 +52,7 @@ export default function CryptoChart({ currency }: { currency: string }) {
         }`
       );
 
-      const prices = res.data.prices.map((p) => ({
+      const prices = res.data.prices.map((p: PricesType) => ({
         time: new Date(p[0]).toLocaleTimeString([], {
           hour: "2-digit",
           minute: "2-digit",
