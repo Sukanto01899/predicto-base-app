@@ -34,6 +34,7 @@ const Play = () => {
       {/* <BetAmount /> */}
       {selectedAsset && (
         <PredictionButtons
+          setActiveTab={() => {}}
           prediction={prediction}
           setPrediction={setPrediction}
           selectedAsset={selectedAsset}

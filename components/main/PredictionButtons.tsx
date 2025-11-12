@@ -7,14 +7,15 @@ type PredictionButtonsProps = {
   selectedAsset: RoundData;
   setPrediction: (dir: "up" | "down" | null) => void;
   prediction: "up" | "down" | null;
+  setActiveTab: (tab: "play" | "history") => void;
 };
 
 const PredictionButtons = ({
   selectedAsset,
   setPrediction,
   prediction,
+  setActiveTab,
 }: PredictionButtonsProps) => {
-  const [activeTab, setActiveTab] = useState("play");
   const [isAnimating, setIsAnimating] = useState(false);
   const assetId = Object.keys(assets).find(
     (key) => assets[key as "BTC" | "ETH"].id === selectedAsset.assetId

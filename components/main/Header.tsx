@@ -1,26 +1,26 @@
-import {
-  Address,
-  Avatar,
-  EthBalance,
-  Identity,
-  Name,
-} from "@coinbase/onchainkit/identity";
-import {
-  Wallet,
-  WalletDropdown,
-  WalletDropdownBasename,
-  WalletDropdownDisconnect,
-} from "@coinbase/onchainkit/wallet";
+// import {
+//   Address,
+//   Avatar,
+//   EthBalance,
+//   Identity,
+//   Name,
+// } from "@coinbase/onchainkit/identity";
+// import {
+//   Wallet,
+//   WalletDropdown,
+//   WalletDropdownBasename,
+//   WalletDropdownDisconnect,
+// } from "@coinbase/onchainkit/wallet";
 import { Zap } from "lucide-react";
 import React from "react";
-import { useAccount, useConnect, useDisconnect, useSwitchChain } from "wagmi";
+// import { useAccount, useConnect, useDisconnect, useSwitchChain } from "wagmi";
 import ConnectedWallet from "../common/ConnectWallet";
 
 const Header = () => {
-  const { isConnected, address, chainId } = useAccount();
-  const { disconnect } = useDisconnect();
-  const { switchChain, isPending: switching } = useSwitchChain();
-  const { connect, isPending: connecting } = useConnect();
+  // const { isConnected, address, chainId } = useAccount();
+  // const { disconnect } = useDisconnect();
+  // const { switchChain, isPending: switching } = useSwitchChain();
+  // const { connect, isPending: connecting } = useConnect();
   return (
     <div className="bg-primary border-b border-blue-700/30 px-4 py-2 flex items-center justify-between">
       <div className="flex items-center gap-2">
