@@ -27,11 +27,16 @@ const ranges = {
   "1M": 30,
 };
 
+type DataType = {
+  time: number;
+  price: number;
+};
+
 export default function CryptoChart({ currency }: { currency: string }) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<DataType[] | []>([]);
   const [range, setRange] = useState("1D");
   const [loading, setLoading] = useState(true);
-  const [currentPrice, setCurrentPrice] = useState(null);
+  const [, setCurrentPrice] = useState(null);
 
   const fetchData = async () => {
     try {
@@ -40,7 +45,7 @@ export default function CryptoChart({ currency }: { currency: string }) {
       // Use CoinGecko free public API
       const res = await axios.get(
         `https://api.coingecko.com/api/v3/coins/${currency.toLowerCase()}/market_chart?vs_currency=usd&days=${
-          ranges[range]
+          ranges[range as "1H" | "6H" | "1D" | "1W" | "1M"]
         }`
       );
 
@@ -89,7 +94,7 @@ export default function CryptoChart({ currency }: { currency: string }) {
         padding: 10,
         cornerRadius: 10,
         callbacks: {
-          label: (ctx) => `$${ctx.formattedValue}`,
+          label: (ctx: { formattedValue: string }) => `$${ctx.formattedValue}`,
         },
       },
       legend: { display: true },

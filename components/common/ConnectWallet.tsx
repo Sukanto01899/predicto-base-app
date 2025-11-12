@@ -3,17 +3,17 @@ import { baseSepolia } from "viem/chains";
 import { farcasterMiniApp as miniAppConnector } from "@farcaster/miniapp-wagmi-connector";
 import {
   useAccount,
-  useChainId,
+  // useChainId,
   useConnect,
-  useDisconnect,
+  // useDisconnect,
   useSwitchChain,
 } from "wagmi";
 import Button from "./Button";
-import { Power } from "lucide-react";
+// import { Power } from "lucide-react";
 
 const ConnectedWallet = () => {
   const { isConnected, address, chainId } = useAccount();
-  const { disconnect } = useDisconnect();
+  // const { disconnect } = useDisconnect();
   const { switchChain, isPending: switching } = useSwitchChain();
   const { connect, isPending: connecting } = useConnect();
 

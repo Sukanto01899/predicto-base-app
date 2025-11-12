@@ -1,5 +1,5 @@
 import neynarClient from "@/config/neynar";
-import { FetchFeedFeedTypeEnum } from "@neynar/nodejs-sdk/build/api";
+// import { FetchFeedFeedTypeEnum } from "@neynar/nodejs-sdk/build/api";
 import { NextRequest, NextResponse } from "next/server";
 
 type Context = {
@@ -7,10 +7,10 @@ type Context = {
 };
 
 export async function GET(request: NextRequest, { params }: Context) {
-  const feedType = FetchFeedFeedTypeEnum.Following;
-  const withRecasts = true;
+  // const feedType = FetchFeedFeedTypeEnum.Following;
+  // const withRecasts = true;
   const limit = 50;
-  const viewerFid = 6131;
+  // const viewerFid = 6131;
 
   try {
     const { fid } = await params;
